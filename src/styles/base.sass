@@ -1,0 +1,459 @@
+@import './valiables.sass'
+
+*
+  box-sizing: border-box
+
+body
+    padding: 0
+    margin: auto
+    font-size: 14px
+    color: $darck
+    font-family: 'Roboto', sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    scroll-behavior: smooth
+    max-width: 1400px
+
+
+h1, h2, h3, h4, h5, h6, p, header, nav, section, footer
+  padding: 0
+  margin: 0
+
+.btn
+    border: none
+    font-weight: normal
+    line-height: 150%
+    cursor: pointer
+
+.accent-btn
+    background-color: $accent-color
+    color: $light
+    border-radius: 50px
+    &:hover
+        background-color: $accent-hover
+        transition: .5 all
+
+.grey-btn
+    background-color: $grey
+    color: $darck
+    border-radius: 50px
+
+.btn-cube
+    padding: 11px 12px
+    border-radius: 0
+    &:hover
+        background-color: $grey-hover
+        transition: .5 all
+    &.active
+        background: black
+        color: #fff
+
+.btn-cube-active
+    background-color: $darck-hover
+
+.add-btn
+    padding: 8px 24px
+    display: flex
+    font-size: 16px
+    align-items: center
+    &::before
+        position: relative
+        content: url('../assets/img/add.svg')
+        width: 24px
+        height: 24px
+        left: -8px
+        top: 0px
+    @media (min-width: 760px)
+        padding: 21px 66px
+
+.cancel
+    border: none
+    font-weight: normal
+    cursor: pointer
+    padding: 11px 24px
+    color: rgba(0, 0, 0, 0.47)
+    background-color: #EAEAEA
+    margin-right: 20px
+    &:hover
+        background-color: $grey-hover
+        transition: .5 all
+
+.create
+    border: none
+    font-weight: normal
+    cursor: pointer
+    padding: 11px 24px
+    background-color: $accent-color
+    color: $light
+    font-weight: 600
+    width: 80%
+    &:hover
+        background-color: $accent-hover
+        transition: .5 all
+
+.base-padding
+    padding: 15px
+    background: rgba(200, 208, 221, 0.1)
+
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-bottom: 23px
+    @media (min-width: 760px)
+        justify-content: center
+    button
+        @media (min-width: 760px)
+            display: none
+
+.tags
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    @media (min-width: 760px)
+        max-width: 700px
+        margin: 0 auto
+    &.tags-filters
+        @media (min-width: 760px)
+            padding-bottom: 30px
+.tag
+    padding: 7px 14px
+    margin: 5px
+
+.included
+    background-color: $darck-hover
+    color: $light
+
+.tags-start
+    justify-content: start
+    margin: 8px 0
+    div:first-child
+        margin-left: 0
+    .tag
+        padding: 2px 12px
+
+.post-tag-color
+    background-color: rgba(200, 208, 221, 0.56)
+    border-radius: 50px
+    &:hover
+        background-color: rgba(193, 199, 207, 0.56)
+
+.color-bg
+    background: rgba(200, 208, 221, 0.1)
+    padding: 0 15px
+
+.css-2b097c-container
+    padding: 15px 0
+    .css-yk16xz-control, .css-1pahdxg-control
+        border-radius: 61px
+        border-color: transparent
+        background: rgba(200, 208, 221, 0.2)
+        padding: 13px 25px
+        outline: none
+        &:hover
+            padding: 13px 25px
+            border-radius: 61px
+            box-shadow: none
+    .css-1wy0on6
+        display: none
+
+.autocomplete-block
+    h1
+        font-weight: bold
+        font-size: 16px
+        line-height: 120%
+        @media (min-width: 760px)
+            font-size: 34px
+            line-height: 39px
+    .autocomplete-padding
+        padding: 0 15px
+        background: rgba(200, 208, 221, 0.1)
+    .css-2b097c-container
+        padding: 15px 0
+        @media (min-width: 760px)
+            max-width: 700px
+            margin: 0 auto
+
+.add-post
+    .css-2b097c-container
+        padding: 0 0 15px 0
+    .css-yk16xz-control, .css-1pahdxg-control
+        border-radius: 4px
+        border-color: transparent
+        background-color: #eaeaea
+        outline: none
+        padding: 0
+        &:hover
+            padding: 0
+            border-radius: 4px
+            box-shadow: none
+            border: none
+    .css-1wy0on6
+        display: none
+
+.help-block-btn
+    display: flex
+    justify-content: center
+    padding: 12px 0
+    @media (min-width: 760px)
+        display: flex
+        max-width: 700px
+        margin: 0 auto
+        justify-content: space-between
+    .add-btn
+        display: none
+        @media (min-width: 760px)
+            display: flex
+    .btn-cube
+        padding: 11px 12px
+
+.help-block-btn-desktop
+    display: none
+    justify-content: start
+    margin: 30px 0
+    @media (min-width: 760px)
+        display: flex
+        justify-content: space-between
+    .help-block-btn
+        @media (min-width: 760px)
+            width: 100%
+            max-width: 100%
+            justify-content: space-between
+            align-items: end
+
+.help-block-btn-mobile
+    @media (min-width: 760px)
+        display: none
+
+.title
+    text-align: center
+    padding: 15px 0 8px 0
+    font-family: 'Open Sans', sans-serif
+  
+        max-width: 700px
+        margin: 0 auto
+
+.main-content
+    max-width: 1100px
+    margin: 0 auto 50px auto
+    padding: 0 18px
+
+.posts-list
+    display: flex
+    flex-wrap: wrap
+    margin: 5px -8px 0 -8px
+
+.posts
+    padding: 15px
+
+.post-wrap
+    width: 100%
+    margin: 8px 0
+    @media (min-width: 1100px)
+        width: 50%
+        padding: 0 8px
+        margin-bottom: 16px
+        width: 540px
+
+.post
+    background-color: rgba(236, 236, 236, 0.56)
+    padding: 20px
+    border-radius: 30px
+            
+    h2
+        font-weight: 600
+        font-size: 18px
+        line-height: 21px
+        padding: 8px 0
+    .date
+        font-weight: normal
+        font-size: 12px
+        line-height: 14px
+        color: #515151
+        margin: 8px 0
+    .message
+        font-weight: normal
+        font-size: 14px
+        line-height: 120%
+        color: #000000
+        padding: 0 0 8px 0
+    span
+        font-weight: 500
+    .tag
+        cursor: default
+    .report-button
+        background: transparent
+        border: none
+        color: darken(rgba(236, 236, 236, 1), 30)
+        font-weight: 700
+        text-transform: uppercase
+        font-size: 12px
+        padding: 0
+
+.suggest
+    color: rgba(235, 0, 255, 1)
+
+.ask
+    color: rgba(0, 102, 255, 1)
+
+.btn-cube-space
+    margin-right: 10px
+
+.label-space
+    margin: 10px 0
+    display: block
+
+.add-post
+    max-width: 992px
+    margin: 0 auto
+    width: 100%
+    padding: 0 14px
+    position: fixed
+    top: 0
+    bottom: 0
+    z-index: 500
+    background-color: rgb(255, 255, 255)
+    box-shadow: 0px 2px 42px rgba(0, 0, 0, 0.111233)
+    transition: all 0.3s ease-out
+    max-height: 100vh
+    overflow-y: scroll
+    @media (min-width: 760px)
+        position: fixed
+        left: 0
+        right:0
+        top: 10px
+        bottom: 10px 
+        transform:translateY(-50%)
+        border-radius: 30px
+        padding: 34px 44px
+    .tags
+        margin: 21px 0 31px 0
+        @media (min-width: 760px)
+            margin: 0 auto
+        .tag
+            margin-top: 10px
+    .nav-title
+        display: flex
+        margin: 31px 0 24px 0
+        img
+            cursor: pointer
+            @media (min-width: 760px)
+                display: none
+        h2
+            width: 100%
+            text-align: center
+            font-weight: bold
+            font-size: 16px
+            line-height: 18px
+            text-align: center
+            @media (min-width: 760px)
+                font-size: 24px
+                margin-bottom: 53px
+    .type-help
+        display: flex
+        justify-content: space-between
+        text-align: center
+        @media (min-width: 760px)
+            justify-content: start
+    input, textarea
+        background-color: rgba(234, 234, 234, 1)
+        border-radius: 4px
+        padding: 11px 11px 11px 12px
+        width: 100%
+        border: none
+        margin: 0 0 8px 0
+        font-family: 'Roboto', sans-serif
+        font-weight: 400
+    textarea
+        height: 121px
+        resize: none
+    input[type="radio"]:checked+label
+        background-color: $darck-hover
+        color: $light
+        font-weight: 600
+    .btn-label-first
+        margin: 0 20px 0 0
+    .block-btn
+        display: flex
+        justify-content: space-between
+        margin: 38px 0
+        @media (min-width: 760px)
+            max-width: 500px
+            margin: 38px auto
+    .inform-block
+        background: rgba(0, 102, 255, 0.15)
+        border-radius: 10px
+        padding: 12px
+        margin: 24px 0 38px
+        h2, h3
+            color: rgba(0, 102, 255, 1)
+            font-weight: 600
+            font-size: 18px
+            line-height: 21px
+        p
+            color: rgba(81, 81, 81, 1)
+            font-weight: 300
+            line-height: 120%
+        h2
+            margin-bottom: 12px
+        h3
+            margin-top: 12px
+            font-family: 'Open Sans', sans-serif
+
+.d-none 
+    display: none
+
+.backdrop
+   width: 100%
+   height: 100%
+   position: fixed
+   z-index: 100
+   opacity: 1
+   left: 0
+   top: 0
+   background-color:  rgba(0, 0, 0, 0.5)
+   visibility: visible
+   border-radius: 0
+
+.modal-open
+    overflow: hidden
+
+.footer-section
+    padding: 38px 17px 48px 17px
+    background-color: #f4f4f4
+    width: 100%
+    display: flex
+    flex-direction: column
+
+.footer-section p
+    font-size: 15px
+    margin-top: 8px
+    margin-bottom: 38px
+    text-align: center
+
+.footer-section span
+    font-weight: 600
+    font-size: 16px
+    margin-bottom: 15px
+
+.logo-item-footer img
+    width: 140px
+    height: 90px
+
+.social-icons
+    display: flex
+    justify-content: space-around
+    margin-bottom: 38px
+    padding: 0 67px
+    @media (min-width: 760px)
+        max-width: 250px
+        margin: 0 auto
+        padding: 0 0 38px 0
+        width: 100%
+
+.application-market
+    @media (min-width: 760px)
+        max-width: 400px
+        margin: 0 auto
+        padding: 0
+        width: 100%
